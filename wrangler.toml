@@ -1,4 +1,5 @@
-name = "littlelink"
+name = "linkhavoc"
+main = "index.html"
 compatibility_date = "2026-01-27"
 
 [assets]

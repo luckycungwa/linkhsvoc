@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Utility pages need not be indexed.
+Disallow: /privacy.html

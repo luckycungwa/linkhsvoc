@@ -1,6 +1,8 @@
-# Docker for LittleLink
+# Docker for LinkHavoc
 
-Docker configuration to run LittleLink in a container.
+Docker configuration to run LinkHavoc in a container.
+
+LinkHavoc is a static-site fork of [LittleLink](https://github.com/sethcottle/littlelink) (MIT); the Docker workflow carries over from upstream.
 
 ## File Structure
 
@@ -24,34 +26,34 @@ Docker configuration to run LittleLink in a container.
 
 ### Creating Personal Link Pages for Different People
 
-One of the main advantages of this Docker setup is how easily you can create multiple personalized instances of LittleLink:
+One of the main advantages of this Docker setup is how easily you can create multiple personalized instances of LinkHavoc:
 
 ```bash
 # Clone the repository
-git clone https://github.com/sethcottle/littlelink.git littlelink-john
+git clone <your-linkhavoc-fork-url> linkhavoc-john
 
 # Customize the content for John
-cd littlelink-john
+cd linkhavoc-john
 # Edit index.html with John's links, customize images, etc.
 
 # Build a Docker image for John's page
-docker build -f docker/Dockerfile -t littlelink-john .
+docker build -f docker/Dockerfile -t linkhavoc-john .
 
 # Run John's page on port 8080
-docker run -d --name john-links -p 8080:80 littlelink-john
+docker run -d --name john-links -p 8080:80 linkhavoc-john
 ```
 
 For additional pages:
 
 ```bash
 # Similarly for another person
-git clone https://github.com/sethcottle/littlelink.git littlelink-jane
-cd littlelink-jane
+git clone <your-linkhavoc-fork-url> linkhavoc-jane
+cd linkhavoc-jane
 # Customize for Jane...
 
 # Build and run on a different port
-docker build -f docker/Dockerfile -t littlelink-jane .
-docker run -d --name jane-links -p 8081:80 littlelink-jane
+docker build -f docker/Dockerfile -t linkhavoc-jane .
+docker run -d --name jane-links -p 8081:80 linkhavoc-jane
 ```
 
 This approach allows you to:
@@ -62,7 +64,7 @@ This approach allows you to:
 
 ## Development vs. Production
 
-There are two main ways to use Docker with LittleLink:
+There are two main ways to use Docker with LinkHavoc:
 
 ### Development Workflow
 
@@ -91,7 +93,7 @@ Create a production-specific docker-compose file:
 
 services:
   web:
-    image: yourname/littlelink:latest
+    image: yourname/linkhavoc:latest
     restart: always
     ports:
       - "8080:80"
@@ -104,7 +106,7 @@ Deploy using:
 
 ```bash
 # Build and tag the image
-docker build -f docker/Dockerfile -t yourname/littlelink:latest .
+docker build -f docker/Dockerfile -t yourname/linkhavoc:latest .
 
 # Run in production with compose
 docker compose -f docker/compose.prod.yaml up -d
@@ -114,10 +116,10 @@ docker compose -f docker/compose.prod.yaml up -d
 
 ```bash
 # Build a production image
-docker build -f docker/Dockerfile -t yourname/littlelink:latest .
+docker build -f docker/Dockerfile -t yourname/linkhavoc:latest .
 
 # Run in production (no volumes mounted)
-docker run -d --name littlelink -p 80:80 --restart always yourname/littlelink:latest
+docker run -d --name linkhavoc -p 80:80 --restart always yourname/linkhavoc:latest
 ```
 
 ## Using Volumes in Production
@@ -130,9 +132,9 @@ mkdir -p /path/on/server/custom-content
 cp -r index.html privacy.html css/ fonts/ images/ /path/on/server/custom-content/
 
 # Run with the custom content mounted
-docker run -d --name littlelink -p 80:80 \
+docker run -d --name linkhavoc -p 80:80 \
   -v /path/on/server/custom-content:/usr/share/nginx/html \
-  yourname/littlelink:latest
+  yourname/linkhavoc:latest
 ```
 
 With Docker Compose:
@@ -140,7 +142,7 @@ With Docker Compose:
 ```yaml
 services:
   web:
-    image: yourname/littlelink:latest
+    image: yourname/linkhavoc:latest
     ports:
       - "80:80"
     volumes:
@@ -173,13 +175,13 @@ docker compose -f docker/compose.yaml logs -f
 
 ```bash
 # Build production image
-docker build -f docker/Dockerfile -t yourname/littlelink:latest .
+docker build -f docker/Dockerfile -t yourname/linkhavoc:latest .
 
 # Run production container
-docker run -d --name littlelink -p 80:80 yourname/littlelink:latest
+docker run -d --name linkhavoc -p 80:80 yourname/linkhavoc:latest
 
 # View logs for the running container
-docker logs -f littlelink
+docker logs -f linkhavoc
 ```
 
 ## Customization
@@ -193,7 +195,7 @@ ports:
 
 Or specify port when running production container:
 ```bash
-docker run -p 8081:80 yourname/littlelink:latest
+docker run -p 8081:80 yourname/linkhavoc:latest
 ```
 
 ### Additional nginx Configuration
@@ -209,22 +211,22 @@ COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 ### Docker on VPS
 ```bash
 # Pull image
-docker pull yourname/littlelink:latest
+docker pull yourname/linkhavoc:latest
 
 # Run container
-docker run -d --name littlelink -p 80:80 yourname/littlelink:latest
+docker run -d --name linkhavoc -p 80:80 yourname/linkhavoc:latest
 
 # With restart policy for auto-recovery
-docker run -d --name littlelink --restart unless-stopped -p 80:80 yourname/littlelink:latest
+docker run -d --name linkhavoc --restart unless-stopped -p 80:80 yourname/linkhavoc:latest
 ```
 
 ### Multiple Sites on One Server
-You can run multiple LittleLink instances on the same server:
+You can run multiple LinkHavoc instances on the same server:
 
 ```bash
 # Run first site on port 8080
-docker run -d --name site1 -p 8080:80 littlelink-site1
+docker run -d --name site1 -p 8080:80 linkhavoc-site1
 
 # Run second site on port 8081
-docker run -d --name site2 -p 8081:80 littlelink-site2
+docker run -d --name site2 -p 8081:80 linkhavoc-site2
 ```

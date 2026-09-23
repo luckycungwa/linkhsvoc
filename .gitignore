@@ -3,3 +3,4 @@
 .devcontainer
 .wrangler/
 node_modules/
+dist/

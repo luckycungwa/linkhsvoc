@@ -1,0 +1,12 @@
+{
+  "name": "linkhavoc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LinkHavoc — a creator link page. Links, content and identity, one page. A rebranded fork of LittleLink.",
+  "license": "MIT",
+  "scripts": {
+    "check": "node scripts/build.mjs --check",
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/dev-server.mjs"
+  }
+}

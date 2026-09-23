@@ -20,6 +20,13 @@ README.md
 LICENSE.md
 VERSION.md
 
+# Node / deploy build tooling (not part of the static site)
+package.json
+package-lock.json
+vercel.json
+scripts
+dist
+
 # Logs
 *.log
 

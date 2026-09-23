@@ -1,6 +1,7 @@
 /*
-* LittleLink Reset
-* A minimal CSS reset for LittleLink
+* LinkHavoc Reset
+* A minimal CSS reset for LinkHavoc
+* Derived from LittleLink (MIT) — see LICENSE.md
 */
 
 /* Box sizing rules */
@@ -81,7 +82,7 @@ select {
 }
 
 :focus-visible {
-  outline: 2px solid #2457F5;
+  outline: 3px solid rgba(59, 130, 246, 0.5);
   outline-offset: 2px;
 }
 

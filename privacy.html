@@ -1,88 +1,70 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--
-  To change the theme, change the class on the html tag below to one of:
-  - theme-auto: Automatically switches based on user's system preferences
-  - theme-light: Forces light theme
-  - theme-dark: Forces dark theme
--->
+  <title>Privacy | LinkHavoc</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
-<html class="theme-auto" lang="en"> <!-- Update `class="theme-auto"` with your preference -->
+  <meta name="description" content="Privacy policy and data collection information for LinkHavoc">
+  <meta name="robots" content="noindex">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f7f3">
 
-    <!-- Page Title - Change this to your name/brand (50-60 characters recommended) -->
-    <title>Privacy Policy | LittleLink</title>
-    <link rel="icon" type="image/png" href="images/avatar.png"> <!-- Update this with your own favicon -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="site">
 
+    <nav class="nav" aria-label="Site">
+      <a class="nav-brand" href="/">
+        <svg class="nav-brand-logo" viewBox="0 0 64 64" role="img" aria-label="LinkHavoc">
+          <rect x="4" y="4" width="56" height="56" rx="14" fill="#ea2804"/>
+          <g transform="translate(12 12) scale(1.6667)" fill="none" stroke="#f9f7f3" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </g>
+        </svg>
+        LinkHavoc
+      </a>
+    </nav>
 
-    <!-- Meta Description - Write a description (150-160 characters recommended) -->
-    <meta name="description" content="Privacy policy and data collection information for LittleLink">
-    <meta name="robots" content="noindex"> <!-- Since this is a utility page -->
+    <main class="main">
+      <div class="center-col">
 
-    <!-- Browser UI Color - Matches the default light/dark theme backgrounds -->
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+        <section class="legal" aria-labelledby="privacy-heading">
+          <h1 id="privacy-heading">Privacy</h1>
+          <p>This is a static page hosted as a creator link page. It does not ship its own analytics, tracking scripts, or forms. Below is a plain-language overview of the few external services a typical deployment may rely on.</p>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/brands.css">
+          <section aria-labelledby="hosting-heading">
+            <h2 id="hosting-heading">Hosting</h2>
+            <p>LinkHavoc is a set of static files served by whichever hosting provider the page is deployed to (for example, Vercel, Cloudflare Workers, Netlify, or DigitalOcean App Platform). The hosting provider's logs may record standard request data such as IP address and user agent to operate the service. See the provider's own privacy policy for details.</p>
+          </section>
 
-  </head>
+          <section aria-labelledby="links-heading">
+            <h2 id="links-heading">Links to external content</h2>
+            <p>The page surfaces links to external platforms (social profiles, video, music, email). When you click them, you leave LinkHavoc and are governed by the target service's own policies. Some embedded services may collect traffic data even when not actively used.</p>
+          </section>
 
-  <body>
-    <main class="container-left">
-      <div class="column">
-        <nav>
-          <a href="index.html" aria-label="Back to homepage">← Back to main page</a>
-        </nav>
-
-        <h1>Privacy Overview</h1>
-
-        <section aria-labelledby="analytics-heading">
-          <h2 id="analytics-heading">Analytics</h2>
-          <p>The services contained in this section enable the Owner to monitor and analyze web traffic and can be used to keep track of User behavior.</p>
-
-          <h3>Example LLC</h3>
-          <ul role="list">
-            <li>Personal Data: various types of Data as specified in the privacy policy of the service</li>
-            <li><a href="https://example.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a></li>
-          </ul>
+          <section aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Questions</h2>
+            <p>Contact the page owner directly for any questions about this page or the data the linked services collect.</p>
+          </section>
         </section>
 
-        <section aria-labelledby="external-content-heading">
-          <h2 id="external-content-heading">External Content</h2>
-          <p>This type of service allows you to view content hosted on external platforms directly from the pages of this website and interact with them.</p>
-          <p>This type of service might still collect web traffic data for the pages where the service is installed, even when Users do not use it.</p>
-
-          <h3>Example LLC</h3>
-          <ul role="list">
-            <li>Personal Data: Usage Data; various types of Data as specified in the privacy policy of the service</li>
-            <li><a href="https://example.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a></li>
-          </ul>
-        </section>
-
-        <section aria-labelledby="hosting-heading">
-          <h2 id="hosting-heading">Hosting and Infrastructure</h2>
-          <p>This type of service has the purpose of hosting Data and files that enable this website to exist.</p>
-          <p>Some services among those listed below, if any, may work through geographically distributed servers, making it difficult to determine the actual location where the Personal Data are stored.</p>
-
-          <h3>Example LLC</h3>
-          <ul role="list">
-            <li>Personal Data: various types of Data as specified in the privacy policy of the service</li>
-            <li><a href="https://example.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
-          </ul>
-        </section>
-
-        <footer>
-          <p>Build your own by forking <a href="https://littlelink.io" target="_blank" rel="noopener">LittleLink.</a></p>
-        </footer>
       </div>
     </main>
 
-  </body>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-legal">
+          <a href="index.html">Back to main page</a>
+        </div>
+      </div>
+    </footer>
 
+  </div>
+</body>
 </html>

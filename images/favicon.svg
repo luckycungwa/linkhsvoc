@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- LinkHavoc brand mark: orange tile + chain-link glyph -->
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#ea2804"/>
+  <g transform="translate(12 12) scale(1.6667)" fill="none" stroke="#f9f7f3" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+  </g>
+</svg>

@@ -1,8 +1,9 @@
 spec:
-  name: littlelink
+  name: linkhavoc
   static_sites:
-    - name: littlelink
+    - name: linkhavoc
       git:
         branch: main
+        # TODO: point at your fork's repository before using this template.
         repo_clone_url: https://github.com/sethcottle/littlelink.git
       output_dir: /

@@ -13,6 +13,11 @@ wrangler.toml
 README.md
 LICENSE.md
 VERSION.md
+package.json
+package-lock.json
+vercel.json
+scripts
+dist
 .idea
 .vscode
 .devcontainer

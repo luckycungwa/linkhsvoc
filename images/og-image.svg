@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f9f7f3"/>
+  <rect x="500" y="135" width="200" height="200" rx="50" fill="#ea2804"/>
+  <g transform="translate(520 155) scale(4.1667)" fill="none" stroke="#f9f7f3" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+  </g>
+  <text x="600" y="455" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="800" fill="#202020" letter-spacing="-3">LinkHavoc</text>
+  <text x="600" y="510" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="500" fill="#575757">Links, content &amp; identity — one page.</text>
+</svg>
